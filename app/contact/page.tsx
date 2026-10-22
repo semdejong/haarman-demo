@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ContactForm } from "@/components/Forms";
+import { OfferteLink } from "@/components/Buttons";
 import { email, phone } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -32,6 +33,14 @@ export default function ContactPage() {
               {email}
             </a>
             <p className="mt-6 max-w-md text-base leading-relaxed">Bel of mail voor een afspraak.</p>
+            <ul className="mt-8 space-y-3 text-base">
+              <li className="border-t border-ink/10 pt-3">Een werkopname, vrijblijvend, bij u thuis of op het erf.</li>
+              <li className="border-t border-ink/10 pt-3">Een kleine klus, onderhoud of een spoedopdracht.</li>
+              <li className="border-t border-ink/10 pt-3">Materiaal, kozijnen of tekenwerk, ook als u zelf bouwt.</li>
+            </ul>
+            <div className="mt-6">
+              <OfferteLink>Werkopname aanvragen</OfferteLink>
+            </div>
           </div>
           <div data-section="formulier">
             <h2 className="display mb-6 text-3xl">Stuur een bericht</h2>

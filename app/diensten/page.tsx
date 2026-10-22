@@ -30,6 +30,16 @@ export default function DienstenPage() {
                   <li key={service.slug} className="border border-ink/10 bg-white p-6">
                     <h3 className="font-display text-2xl font-semibold">{service.label}</h3>
                     <p className="mt-3 text-base leading-relaxed">{service.summary}</p>
+                    <ul className="mt-4 space-y-1 text-sm">
+                      {service.points.slice(0, 4).map((point) => (
+                        <li key={point} className="flex gap-2">
+                          <span className="text-brand" aria-hidden>
+                            —
+                          </span>
+                          {point}
+                        </li>
+                      ))}
+                    </ul>
                     <Link href={service.href} className="mt-4 inline-flex min-h-11 items-center font-semibold text-brand underline underline-offset-4">
                       Lees verder
                     </Link>

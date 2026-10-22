@@ -49,6 +49,31 @@ export default function WerkopnamePage() {
         </div>
       </section>
 
+      <section data-section="gesprek" className="border-t border-ink/10 bg-straw-soft">
+        <div className="mx-auto grid max-w-6xl gap-8 px-5 py-16 md:grid-cols-2">
+          <div>
+            <p className="eyebrow">Tijdens de werkopname</p>
+            <h2 className="display mt-3 text-4xl">We kijken eerst, tekenen daarna</h2>
+            <p className="mt-4 text-base leading-relaxed">
+              U hoeft nog niets te beslissen. We bespreken wat u wilt, of er al tekeningen zijn, en of er een vergunning
+              nodig is. Pas daarna ontvangt u een vrijblijvende offerte.
+            </p>
+          </div>
+          <ul className="divide-y divide-ink/10 border-y border-ink/10">
+            {[
+              "Uw wensen voor de woning, de boerderij of het bedrijf",
+              "Of u al tekeningen heeft, of dat wij een schetsontwerp maken",
+              "Vergunningen, indien die nodig zijn",
+              "Wie het aanspreekpunt is voor, tijdens en na de bouw",
+            ].map((item) => (
+              <li key={item} className="py-3 text-base">
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
       <section data-section="formulier" className="border-t border-ink/10 bg-white">
         <div className="mx-auto grid max-w-6xl gap-12 px-5 py-16 md:grid-cols-[minmax(0,1fr)_20rem] md:py-20">
           <div>

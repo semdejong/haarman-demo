@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Gallery from "@/components/Gallery";
 import Timeline from "@/components/Timeline";
 import { OfferteLink, PhoneLink } from "@/components/Buttons";
-import { historyPhoto } from "@/lib/photos";
+import { fleetPhoto, historyPhoto } from "@/lib/photos";
 
 export const metadata: Metadata = {
   title: "Over ons",
@@ -56,13 +56,22 @@ export default function OverOnsPage() {
       </section>
 
       <section data-section="profiel" className="border-t border-ink/10 bg-white">
-        <div className="mx-auto max-w-3xl px-5 py-16">
-          <h2 className="display text-4xl">Profiel</h2>
-          <p className="mt-5 text-lg leading-relaxed">
-            Aannemersbedrijf Haarman beschikt over een gedisciplineerd team van vaste vakbekwame werknemers en een schare
-            aan vaste onderaannemers. Hiermee wordt naar de wensen van onze opdrachtgevers gebouwd. Een goede organisatie
-            en korte communicatielijnen zorgen ervoor dat wij het werk voor onze opdrachtgevers goed kunnen verrichten.
-          </p>
+        <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-16 lg:grid-cols-2">
+          <div>
+            <p className="eyebrow">Profiel</p>
+            <h2 className="display mt-3 text-4xl">Een vaste ploeg, korte lijnen</h2>
+            <p className="mt-5 text-lg leading-relaxed">
+              Aannemersbedrijf Haarman beschikt over een gedisciplineerd team van vaste vakbekwame werknemers en een
+              schare aan vaste onderaannemers. Hiermee wordt naar de wensen van onze opdrachtgevers gebouwd. Een goede
+              organisatie en korte communicatielijnen zorgen ervoor dat wij het werk voor onze opdrachtgevers goed
+              kunnen verrichten.
+            </p>
+            <p className="mt-4 text-base leading-relaxed">
+              Sinds 1986 staat de timmerwerkplaats op het eigen erf. Het wagenpark rijdt van daaruit naar Harfsen en
+              omstreken.
+            </p>
+          </div>
+          <Gallery photos={[fleetPhoto]} variant="feature" />
         </div>
       </section>
 

@@ -58,6 +58,20 @@ export default function Home() {
           </div>
           <Gallery photos={[heroPhoto]} variant="feature" priority />
         </div>
+      <div data-section="maatlat" className="border-t border-ink/10 bg-white">
+        <div className="mx-auto max-w-6xl px-5 py-8">
+          <p className="eyebrow">Van een dakpan tot een landhuis</p>
+          <ul className="maatlat mt-4">
+            {services.map((service) => (
+              <li key={service.slug} className="border-r border-brand/20 last:border-r-0">
+                <Link href={service.href} className="flex min-h-16 items-end px-3 py-3 font-display text-sm font-semibold uppercase tracking-wide hover:bg-paper hover:text-brand">
+                  {service.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
       </section>
 
       <section data-section="routes" className="mx-auto grid max-w-6xl gap-px bg-ink/10 px-5 py-16 md:grid-cols-2 md:py-24">

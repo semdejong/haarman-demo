@@ -167,6 +167,31 @@ body {
   margin-bottom: 0.45rem;
 }
 
+.bestek {
+  border: 1px solid rgba(0, 76, 153, 0.28);
+  background-color: #fff;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 47px,
+    rgba(0, 76, 153, 0.08) 48px
+  );
+  padding: 1.25rem 1.25rem 0.5rem;
+}
+
+.maatlat {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid #004c99;
+  border-bottom: 1px solid #004c99;
+}
+
+@media (min-width: 768px) {
+  .maatlat {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
 dialog.lightbox {
   width: min(900px, calc(100vw - 1.5rem));
   max-height: calc(100vh - 1.5rem);
