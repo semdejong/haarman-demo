@@ -9,8 +9,8 @@ export default function Footer() {
     <footer data-section="footer" className="bg-ink text-paper">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-[1.2fr_1fr_1fr]">
         <div>
-          <Link href="/" aria-label="Aannemersbedrijf Haarman, naar de homepage" className="block w-[260px]">
-            <Logo />
+          <Link href="/" aria-label="Aannemersbedrijf Haarman, naar de homepage" className="inline-flex">
+            <Logo full />
           </Link>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-paper/80">
             {content.company.legalName}

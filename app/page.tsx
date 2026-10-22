@@ -51,7 +51,7 @@ export default function Home() {
               Aannemersbedrijf Haarman is een traditioneel aannemersbedrijf, gespecialiseerd in de burger- en
               utiliteitsbouw. Het werk doen we voornamelijk in Harfsen en omstreken.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="cta-row mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <OfferteLink>Vrijblijvende werkopname</OfferteLink>
               <PhoneLink />
             </div>
@@ -64,7 +64,7 @@ export default function Home() {
           <ul className="maatlat mt-4">
             {services.map((service) => (
               <li key={service.slug} className="border-r border-brand/20 last:border-r-0">
-                <Link href={service.href} className="flex min-h-16 items-end px-3 py-3 font-display text-sm font-semibold uppercase tracking-wide hover:bg-paper hover:text-brand">
+                <Link href={service.href} className="flex min-h-16 items-center px-3 py-3 font-display text-sm font-semibold uppercase leading-tight tracking-wide hover:bg-paper hover:text-brand">
                   {service.label}
                 </Link>
               </li>
@@ -74,8 +74,8 @@ export default function Home() {
       </div>
       </section>
 
-      <section data-section="routes" className="mx-auto grid max-w-6xl gap-px bg-ink/10 px-5 py-16 md:grid-cols-2 md:py-24">
-        <article className="bg-paper p-6 md:p-10">
+      <section data-section="routes" className="mx-auto grid max-w-6xl gap-6 px-5 py-16 md:grid-cols-2 md:py-24">
+        <article className="border border-ink/10 bg-white p-6 md:p-10">
           <p className="font-display text-sm font-semibold tracking-[0.18em] text-brick">01</p>
           <h2 className="display mt-3 text-4xl">Ik wil (ver)bouwen</h2>
           <p className="mt-4 text-base leading-relaxed">
@@ -93,7 +93,7 @@ export default function Home() {
             ))}
           </ul>
         </article>
-        <article className="bg-straw-soft p-6 md:p-10">
+        <article className="border border-ink/10 bg-straw-soft p-6 md:p-10">
           <p className="font-display text-sm font-semibold tracking-[0.18em] text-brick">02</p>
           <h2 className="display mt-3 text-4xl">Ik heb een klus of onderhoud</h2>
           <p className="mt-4 text-base leading-relaxed">
@@ -122,7 +122,7 @@ export default function Home() {
               <div key={group}>
                 <h3 className="font-display text-2xl font-semibold uppercase tracking-wide text-brand">{groupMeta[group].title}</h3>
                 <p className="mt-2 max-w-2xl text-base">{groupMeta[group].lede}</p>
-                <ul className="mt-6 grid gap-6 md:grid-cols-2">
+                <ul className="mt-6 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
                   {services
                     .filter((service) => service.group === group)
                     .map((service) => (
@@ -162,7 +162,7 @@ export default function Home() {
             Meer over woonboerderijen
           </Link>
         </div>
-        <Gallery photos={farmPhotos} variant="grid" />
+        <Gallery photos={farmPhotos} variant="pair" />
       </section>
 
       <section data-section="werk" className="border-y border-ink/10 bg-white/60">

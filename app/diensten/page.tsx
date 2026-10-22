@@ -23,7 +23,11 @@ export default function DienstenPage() {
           <section key={group} data-section={group}>
             <h2 className="display text-4xl">{groupMeta[group].title}</h2>
             <p className="mt-3 max-w-2xl text-base">{groupMeta[group].lede}</p>
-            <ul className="mt-8 grid gap-6 md:grid-cols-2">
+            <ul
+              className={`mt-8 grid gap-6 md:grid-cols-2 ${
+                services.filter((service) => service.group === group).length === 3 ? "xl:grid-cols-3" : ""
+              }`}
+            >
               {services
                 .filter((service) => service.group === group)
                 .map((service) => (

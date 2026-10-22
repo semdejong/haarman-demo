@@ -31,15 +31,15 @@ export default function Header() {
   }, [pathname]);
 
   return (
-    <header data-section="header" className="sticky top-0 z-40 border-b border-ink/10 bg-paper/95 backdrop-blur">
+    <header data-section="header" className="sticky top-0 z-50 border-b border-ink/10 bg-paper">
       <div className="h-1 bg-brand" />
       <div className="mx-auto max-w-6xl px-4 py-3 md:px-5">
       <div className="flex items-center gap-3">
         <Link href="/" className="mr-auto shrink-0" aria-label="Aannemersbedrijf Haarman, naar de homepage">
-          <span className="block w-[148px] sm:hidden">
+          <span className="sm:hidden">
             <Logo compact />
           </span>
-          <span className="hidden w-[220px] sm:block lg:w-[300px]">
+          <span className="hidden sm:inline-flex">
             <Logo />
           </span>
         </Link>
@@ -110,7 +110,7 @@ export default function Header() {
         id="site-menu"
         hidden={!open}
         aria-label="Mobiel menu"
-        className="max-h-[calc(100dvh-4.5rem)] overflow-y-auto border-t border-ink/10 bg-paper px-4 py-4 lg:hidden"
+        className="fixed inset-x-0 bottom-0 top-[7.25rem] z-[60] overflow-y-auto border-t border-ink/10 bg-paper px-4 py-2 pb-28 lg:hidden"
       >
         <ul className="mx-auto max-w-6xl">
           {mobileNav.map((item) => (

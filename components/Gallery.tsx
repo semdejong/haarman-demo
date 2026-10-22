@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import type { Photo } from "@/lib/photos";
 
-type Variant = "grid" | "strip" | "feature";
+type Variant = "grid" | "strip" | "feature" | "pair";
 
 export default function Gallery({
   photos,
@@ -50,7 +50,9 @@ export default function Gallery({
       ? "flex snap-x snap-mandatory gap-4 overflow-x-auto pb-3"
       : variant === "feature"
         ? "max-w-[900px]"
-        : "columns-1 gap-4 sm:columns-2 lg:columns-3";
+        : variant === "pair"
+          ? "grid grid-cols-1 gap-4 sm:grid-cols-2"
+          : "grid grid-cols-2 gap-3 sm:grid-cols-3";
 
   return (
     <>
@@ -61,9 +63,9 @@ export default function Gallery({
             className={
               variant === "strip"
                 ? "w-[82vw] max-w-[420px] shrink-0 snap-start"
-                : variant === "feature"
+                : variant === "feature" || variant === "pair"
                   ? "max-w-[900px]"
-                  : "gallery-card mb-4 break-inside-avoid"
+                  : "min-w-0"
             }
           >
             <button
@@ -71,7 +73,7 @@ export default function Gallery({
               onClick={() => setActive(index)}
               className="mount block w-full text-left"
             >
-              <span className={`mount-media block ${variant === "strip" ? "relative aspect-[4/3]" : ""}`}>
+              <span className={`mount-media block ${variant === "strip" || variant === "grid" ? "relative aspect-[4/3]" : ""}`}>
                 <Image
                   src={photo.src}
                   alt={photo.alt}
@@ -81,10 +83,10 @@ export default function Gallery({
                   sizes={
                     variant === "feature"
                       ? "(max-width: 900px) 100vw, 900px"
-                      : "(max-width: 640px) 86vw, (max-width: 1024px) 46vw, 380px"
+                      : "(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 380px"
                   }
                   className={
-                    variant === "strip"
+                    variant === "strip" || variant === "grid"
                       ? "absolute inset-0 h-full w-full max-w-none object-cover"
                       : "h-auto w-full"
                   }

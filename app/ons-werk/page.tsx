@@ -42,9 +42,8 @@ export default function OnsWerkPage() {
                 Naar de dienst
               </Link>
             </div>
-            <div className="mt-8 grid gap-4 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-start">
-              <Gallery photos={[gallery.photos[0]]} variant="feature" />
-              {gallery.photos.length > 1 ? <Gallery photos={gallery.photos.slice(1)} /> : null}
+            <div className="mt-8">
+              <Gallery photos={gallery.photos} />
             </div>
           </div>
         </section>

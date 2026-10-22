@@ -44,7 +44,7 @@ export default async function ServicePage({ params }: Props) {
             <p className="eyebrow">Diensten · Harfsen en omstreken</p>
             <h1 className="display mt-3 max-w-4xl text-5xl md:text-6xl">{service.label}</h1>
             <p className="mt-5 max-w-xl text-lg leading-relaxed">{service.summary}</p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="cta-row mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <OfferteLink>Vrijblijvende werkopname</OfferteLink>
               <PhoneLink />
             </div>
