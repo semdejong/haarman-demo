@@ -127,7 +127,7 @@ export default function OverOnsPage() {
             beschikken over een grote hoeveelheid kennis in alle facetten van de bouw.
           </p>
           <p>
-            Aannemersbedrijf Haarman is één van de 2.000 bouwbedrijven die voldoen aan de kwaliteitseisen van BouwGarant.
+            Aannemersbedrijf Haarman is aangesloten bij BouwGarant en voldoet aan de kwaliteitseisen van dat keurmerk.
             Kiezen voor een BouwGarant-aannemer betekent dat u kiest voor kwaliteit. Tevens kunt u bij ons een
             verbouwgarantie afsluiten. Deze beschermt tegen de financiële risico&apos;s van verbouwen.
           </p>

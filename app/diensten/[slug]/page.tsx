@@ -111,7 +111,7 @@ export default async function ServicePage({ params }: Props) {
 
       <section data-section="naast" className="border-t border-ink/10">
         <div className="mx-auto max-w-6xl px-5 py-16">
-          <h2 className="display text-3xl">Ook in de buurt van dit werk</h2>
+          <h2 className="display text-3xl">Verwant werk</h2>
           <ul className="mt-6 grid gap-4 md:grid-cols-3">
             {related.map((item) => (
               <li key={item.slug}>
